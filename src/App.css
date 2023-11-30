@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&family=Jost:wght@100;200;300;400;500;600;700&family=Playfair+Display&family=Quicksand:wght@500&family=Rokkitt&display=swap');
+
+*{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+}
+
+nav{
+    z-index : 10001 !important;
+}
+
+.gradientBg{
+    background: linear-gradient(99deg, #EE9Ae5 0%, #5961F9 100%);
+}
+
+.btnPrimary{
+    @apply py-3 px-8 bg-secondary font-semibold text-white rounded hover:bg-primary transition-all duration-300;
+}
+
+.hover-container {
+    position: relative;
+    
+}
+
+.hover-container a {
+    display: block;
+    position: relative;
+}
+
+.hover-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    background-color: rgba(0, 0, 0, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.hover-container:hover .overlay {
+    opacity: 1;
+}
+
+.hover-container .overlay p {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
